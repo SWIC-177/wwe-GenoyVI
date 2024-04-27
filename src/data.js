@@ -46,6 +46,17 @@ const CHAMPIONCHIPS = CHAMPIONS
         };
     });
 
+    function toSorted(champions) {
+      return champions.sort((a, b) => {
+        const lastNameA = a.split(" ").pop();
+        const lastNameB = b.split(" ").pop();
+        return lastNameA.localeCompare(lastNameB);
+      });
+    }
+
+    const sortedChampions = toSorted(CHAMPIONS);
+    console.log(sortedChampions);
+
 
 
 
