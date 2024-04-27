@@ -53,3 +53,12 @@ console.log(sortedChampionsByLastName);
 
 const sortedChampionsByFirstName = sortArrayBy(CHAMPIONS, "first");
 console.log(sortedChampionsByFirstName);
+
+const CHAMPIONSHIPS = BELTS.map((title) => {
+    return {
+        title,
+        champion: "",
+    };
+});
+
+console.log(CHAMPIONSHIPS);
