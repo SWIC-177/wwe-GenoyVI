@@ -1,7 +1,5 @@
-import { BELTS } from "./data.js";
+import { BELTS } from "./src/data";
 
-const beltsWithNXT = BELTS.filter(
-    (belt) => belt !== "NXT Champion",
-);
+const beltsWithTag = BELTS.filter((belt) => belt !== "Tag Team Champion");
 
-console.log(beltsWithNXT);
+console.log(beltsWithTag);
