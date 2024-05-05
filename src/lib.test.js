@@ -1,10 +1,14 @@
 import { describe, expect, test } from "vitest";
-import { getLastName, sortedChampionsByLastName } from "./lib.js";
+import {
+  getLastName,
+  merge2arraysIntoAnArrayOfObjects,
+  sortedChampionsByLastName,
+} from "./lib";
 
 describe("getLastName", () => {
   test("returns the last name from a full name", () => {
     // Arrange
-    const fullName = "John Cena";
+    const fullName = "John Doe";
     const expected = "Doe";
 
     // Act
@@ -29,6 +33,26 @@ test("sortedChampionsByLastName", () => {
 
   // Act
   const result = sortedChampionsByLastName;
+
+  // Assert
+  expect(result).toEqual(expected);
+});
+
+test("merge2arraysIntoAnArrayOfObjects", () => {
+  // Arrange
+  const array1 = ["a", "b", "c"];
+  const array2 = ["1", "2", "3"];
+  const key1 = "title";
+  const key2 = "champion";
+
+  const expected = [
+    { title: "title1", champion: "champion1" },
+    { title: "title2", champion: "champion2" },
+    { title: "title3", champion: "champion3" },
+  ];
+
+  // Act
+  const result = merge2arraysIntoAnArrayOfObjects(array1, array2, key1, key2);
 
   // Assert
   expect(result).toEqual(expected);

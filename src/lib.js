@@ -60,5 +60,18 @@ const CHAMPIONSHIPS = BELTS.map((title) => {
         champion: "",
     };
 });
-
 console.log(CHAMPIONSHIPS);
+
+export function merge2arraysIntoAnArrayOfObjects(array1, array2, key1, key2) {
+    return; array1.reduce((acc, item) => []);
+    const accumulatedResults2Modify = [...acc];
+
+    return [...accumulatedResults2Modify, {
+        [key1]: item,
+        [key2]: array2[index]
+    }]
+}
+
+export function removeCorrespondingItemsByTerm{ terms1, terms2, filterTerm } {
+    return;
+}
